@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ListApp.VIews.ListPage">
+	<ContentPage.Content>
+
+        <StackLayout Padding="0,30,0,0" BackgroundColor="White">
+            <Grid BackgroundColor="Black" HeightRequest="40">
+                <Label Grid.Column="0" Text="Name" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" Font="Large">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NameHandle_Tapped"/>
+                    </Label.GestureRecognizers>   
+                </Label>
+                <Label Grid.Column="1" Text="DateRcvd" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" Font="Large">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="DateRcvdHandle_Tapped"/>
+                    </Label.GestureRecognizers> 
+                </Label>
+                <Label Grid.Column="2" Text="Price" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" Font="Large">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PriceHandle_Tapped"/>
+                    </Label.GestureRecognizers> 
+                </Label>
+            </Grid>
+            <StackLayout x:Name="lstData" BackgroundColor="Silver" >
+            </StackLayout>
+            <Grid BackgroundColor="Gray" Padding="5">
+                <Button x:Name="prvbtn" Grid.Column="0" BorderRadius="10" Text="Left" BackgroundColor="Silver" TextColor="Black" Clicked="PrevHandle_Clicked" IsEnabled="false"/>
+                <Button x:Name="nxtbtn" Grid.Column="1" BorderRadius="10" Text="Right" BackgroundColor="Silver" TextColor="Black" Clicked="NextHandle_Clicked" IsEnabled="true"/>
+            </Grid>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
